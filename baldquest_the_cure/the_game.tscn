@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://mm4em4db07dm"]
+
+[ext_resource type="Script" uid="uid://b2cag2u8pal4e" path="res://the_game.gd" id="1_sbril"]
+[ext_resource type="PackedScene" uid="uid://dfc6oadcs7ssl" path="res://world.tscn" id="2_ir4x8"]
+
+[node name="TheGame" type="Node2D"]
+script = ExtResource("1_sbril")
+
+[node name="World" parent="." instance=ExtResource("2_ir4x8")]
+
+[node name="MinigameContainer" type="Node2D" parent="."]
