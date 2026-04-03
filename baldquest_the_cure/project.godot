@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Baldquest the cure"
-run/main_scene="uid://dfc6oadcs7ssl"
+run/main_scene="uid://mm4em4db07dm"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
