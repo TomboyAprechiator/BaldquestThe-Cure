@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ocgm85nlmos"]
+
+[ext_resource type="Script" uid="uid://cgv3md8jkxtjo" path="res://wiregame.gd" id="1_3a7ar"]
+[ext_resource type="PackedScene" uid="uid://bq1h7d5qa3fm2" path="res://wirenode.tscn" id="1_ogvca"]
+
+[node name="wiregame" type="Node2D"]
+script = ExtResource("1_3a7ar")
+
+[node name="wirenode" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 54.0
+offset_top = 34.0
+offset_right = 62.0
+offset_bottom = 42.0
+
+[node name="wirenode2" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 63.0
+offset_top = 162.0
+offset_right = 71.0
+offset_bottom = 170.0
+
+[node name="wirenode3" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 63.0
+offset_top = 289.0
+offset_right = 71.0
+offset_bottom = 297.0
+
+[node name="wirenode4" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 61.0
+offset_top = 405.0
+offset_right = 69.0
+offset_bottom = 413.0
+
+[node name="wirenode5" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 65.0
+offset_top = 518.0
+offset_right = 73.0
+offset_bottom = 526.0
+
+[node name="wirenoderight" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 1054.0
+offset_top = 104.0
+offset_right = 1062.0
+offset_bottom = 112.0
+rotation = 3.14159
+
+[node name="wirenoderight2" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 1052.0
+offset_top = 222.0
+offset_right = 1060.0
+offset_bottom = 230.0
+rotation = 3.14159
+
+[node name="wirenoderight3" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 1056.0
+offset_top = 344.0
+offset_right = 1064.0
+offset_bottom = 352.0
+rotation = 3.14159
+
+[node name="wirenoderight4" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 1064.0
+offset_top = 474.0
+offset_right = 1072.0
+offset_bottom = 482.0
+rotation = 3.14159
+
+[node name="wirenoderight5" parent="." instance=ExtResource("1_ogvca")]
+offset_left = 1062.0
+offset_top = 604.0
+offset_right = 1070.0
+offset_bottom = 612.0
+rotation = 3.14159
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 3.0
+offset_right = 656.0
+offset_bottom = 34.0
+text = "Done"
+
+[connection signal="pressed" from="wirenode" to="." method="_on_wirenode_pressed"]
+[connection signal="pressed" from="wirenode2" to="." method="_on_wirenode_2_pressed"]
+[connection signal="pressed" from="wirenode3" to="." method="_on_wirenode_3_pressed"]
+[connection signal="pressed" from="wirenode4" to="." method="_on_wirenode_4_pressed"]
+[connection signal="pressed" from="wirenode5" to="." method="_on_wirenode_5_pressed"]
+[connection signal="pressed" from="wirenoderight" to="." method="_on_wirenoderight_pressed"]
+[connection signal="pressed" from="wirenoderight2" to="." method="_on_wirenoderight_2_pressed"]
+[connection signal="pressed" from="wirenoderight3" to="." method="_on_wirenoderight_3_pressed"]
+[connection signal="pressed" from="wirenoderight4" to="." method="_on_wirenoderight_4_pressed"]
+[connection signal="pressed" from="wirenoderight5" to="." method="_on_wirenoderight_5_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

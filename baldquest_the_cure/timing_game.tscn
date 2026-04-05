@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3wu0nm16xcf7"]
+
+[ext_resource type="Script" uid="uid://ckmvqbeedxuw2" path="res://arrow.gd" id="1_emvvt"]
+[ext_resource type="Texture2D" uid="uid://tld4aymnbsg2" path="res://icon.svg" id="1_xd4iq"]
+[ext_resource type="Texture2D" uid="uid://b02pndt0ug604" path="res://Green.bmp" id="2_emvvt"]
+[ext_resource type="Script" uid="uid://djo3sftaau1ct" path="res://target.gd" id="3_lvjan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvjan"]
+size = Vector2(121, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a1hw"]
+size = Vector2(95, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb1vn"]
+size = Vector2(64, 406)
+
+[node name="TimingGame" type="Node2D"]
+
+[node name="Arrow" type="CharacterBody2D" parent="."]
+position = Vector2(154, 309)
+script = ExtResource("1_emvvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_lvjan")
+
+[node name="Sprite2D" type="Sprite2D" parent="Arrow"]
+texture = ExtResource("1_xd4iq")
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2(540, 308)
+script = ExtResource("3_lvjan")
+
+[node name="Area2D" type="Area2D" parent="Target"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target/Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_4a1hw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target"]
+texture = ExtResource("2_emvvt")
+
+[node name="Turnaround" type="Area2D" parent="."]
+position = Vector2(1059, 174)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turnaround"]
+position = Vector2(54, 138)
+shape = SubResource("RectangleShape2D_sb1vn")
+
+[node name="Turnaround2" type="Area2D" parent="."]
+position = Vector2(-18, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Turnaround2"]
+position = Vector2(54, 138)
+shape = SubResource("RectangleShape2D_sb1vn")
+
+[connection signal="body_entered" from="Target/Area2D" to="Target" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Target/Area2D" to="Target" method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="Turnaround" to="Arrow" method="_on_turnaround_area_entered"]
+[connection signal="body_entered" from="Turnaround" to="Arrow" method="_on_turnaround_body_entered"]
+[connection signal="area_entered" from="Turnaround2" to="Arrow" method="_on_turnaround_2_area_entered"]
+[connection signal="body_entered" from="Turnaround2" to="Arrow" method="_on_turnaround_2_body_entered"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfc6oadcs7ssl"]
+[gd_scene load_steps=7 format=3 uid="uid://dfc6oadcs7ssl"]
 
 [ext_resource type="PackedScene" uid="uid://dd54ftj23g0bb" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://byckg7caea5e1" path="res://interactable_base_object.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://cpp4313c44gb7" path="res://timinggameloader.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://cbt5ayvnayh1i" path="res://wiregameloader.tscn" id="4_aqk2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
 size = Vector2(43, 649.25)
@@ -41,3 +43,9 @@ shape = SubResource("RectangleShape2D_tlwt5")
 
 [node name="InteractableBaseObject" parent="." instance=ExtResource("2_fj7yv")]
 position = Vector2(897, 435)
+
+[node name="timinggameloader" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(122, 525)
+
+[node name="wiregameloader" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(322, 525)

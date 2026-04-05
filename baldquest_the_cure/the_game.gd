@@ -23,8 +23,12 @@ func _start_minigame(scene_path: String):
 		$MinigameContainer.add_child(instance)
 		
 	$World/Player.set_physics_process(false)
+	$World/InteractableBaseObject.set_process(false)
+	$World/timinggameloader.set_process(false)
 func _end_minigame():
 	for child in $MinigameContainer.get_children():
 		child.queue_free()
 	$World.visible = true
 	$World/Player.set_physics_process(true)
+	$World/InteractableBaseObject.set_process(true)
+	$World/timinggameloader.set_process(true)

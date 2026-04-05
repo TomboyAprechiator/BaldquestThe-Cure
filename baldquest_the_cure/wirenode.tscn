@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq1h7d5qa3fm2"]
+
+[ext_resource type="Texture2D" uid="uid://bwktwjsssrygl" path="res://wirenode.bmp" id="1_jgyoj"]
+
+[node name="wirenode" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_jgyoj")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(91, 50)
