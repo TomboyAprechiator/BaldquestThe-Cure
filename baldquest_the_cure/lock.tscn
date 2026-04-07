@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b612rthunu5rr"]
+
+[ext_resource type="Texture2D" uid="uid://f5qyo1yushko" path="res://Devsprite_Lock.bmp" id="1_l5ccq"]
+
+[node name="Lock" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l5ccq")

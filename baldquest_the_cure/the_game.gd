@@ -25,6 +25,7 @@ func _start_minigame(scene_path: String):
 	$World/Player.set_physics_process(false)
 	$World/InteractableBaseObject.set_process(false)
 	$World/timinggameloader.set_process(false)
+	$World/lockpickgameloader.set_process(false)
 func _end_minigame():
 	for child in $MinigameContainer.get_children():
 		child.queue_free()
@@ -32,3 +33,4 @@ func _end_minigame():
 	$World/Player.set_physics_process(true)
 	$World/InteractableBaseObject.set_process(true)
 	$World/timinggameloader.set_process(true)
+	$World/lockpickgameloader.set_process(true)

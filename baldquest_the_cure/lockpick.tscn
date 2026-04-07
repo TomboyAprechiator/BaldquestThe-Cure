@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cexbvh8ata401"]
+
+[ext_resource type="Texture2D" uid="uid://lxm57udk4tle" path="res://Lockpick.bmp" id="1_nb3i4"]
+
+[node name="Lockpick" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -189)
+texture = ExtResource("1_nb3i4")

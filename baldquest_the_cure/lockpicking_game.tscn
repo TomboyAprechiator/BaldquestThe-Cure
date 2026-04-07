@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcfwe6clihpvr"]
+
+[ext_resource type="Script" uid="uid://dlg0gir20ws66" path="res://lockpicking_game.gd" id="1_bvlhm"]
+[ext_resource type="PackedScene" uid="uid://b612rthunu5rr" path="res://lock.tscn" id="1_sh1l2"]
+[ext_resource type="PackedScene" uid="uid://cexbvh8ata401" path="res://lockpick.tscn" id="2_hrux1"]
+
+[node name="LockpickingGame" type="Node2D"]
+script = ExtResource("1_bvlhm")
+
+[node name="Lock" parent="." instance=ExtResource("1_sh1l2")]
+position = Vector2(551, 417)
+
+[node name="Lockpick" parent="." instance=ExtResource("2_hrux1")]
+position = Vector2(546, 392)
+
+[node name="Lockpick2" parent="." instance=ExtResource("2_hrux1")]
+position = Vector2(546, 390)
