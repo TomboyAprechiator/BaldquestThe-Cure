@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://tggk8bb13m4m"]
+
+[ext_resource type="Script" uid="uid://idrikn0q2say" path="res://horizontal_trigger.gd" id="1_i3hkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiyhh"]
+size = Vector2(8, 648)
+
+[node name="HorizontalTrigger" type="Area2D"]
+script = ExtResource("1_i3hkf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 324)
+shape = SubResource("RectangleShape2D_fiyhh")
+debug_color = Color(0.658102, 0.514755, 0.0720085, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

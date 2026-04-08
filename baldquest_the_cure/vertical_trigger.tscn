@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://br7js7vxnydjo"]
+
+[ext_resource type="Script" uid="uid://bku55yn8agmm5" path="res://vertical_trigger.gd" id="1_enyo4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdam5"]
+size = Vector2(1152, 12)
+
+[node name="VerticalTrigger" type="Area2D"]
+script = ExtResource("1_enyo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(576, 6)
+shape = SubResource("RectangleShape2D_tdam5")
+debug_color = Color(0.636027, 0.523208, 0.172878, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
