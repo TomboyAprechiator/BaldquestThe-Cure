@@ -65,10 +65,21 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_room_2_enter_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_room_1_enter_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+func open_door(doorid: int):
+	if doorid == 1:
+		$TileMapLayer.set_cell(Vector2i(44,11),-1)
+		$TileMapLayer.set_cell(Vector2i(44,12),-1)
+	if doorid == 2:
+		$TileMapLayer.set_cell(Vector2i(51,20),-1)
+		$TileMapLayer.set_cell(Vector2i(51,21),-1)
+	if doorid == 3:
+		$TileMapLayer.set_cell(Vector2i(51,33),-1)
+		$TileMapLayer.set_cell(Vector2i(51,34),-1)
+	if doorid == 4:
+		$TileMapLayer.set_cell(Vector2i(61,16),-1)
+		$TileMapLayer.set_cell(Vector2i(62,16),-1)
+	if doorid == 5:
+		get_tree().current_scene.powah = true
+	if doorid == 7:
+		$TileMapLayer.set_cell(Vector2i(57,27),-1)
+		$TileMapLayer.set_cell(Vector2i(57,28),-1)

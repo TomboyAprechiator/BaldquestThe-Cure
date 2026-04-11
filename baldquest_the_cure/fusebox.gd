@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		interact()
 
 func interact():
-	get_tree().current_scene._start_minigame("res://timing_game.tscn",5)
+	get_tree().current_scene.fuse = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

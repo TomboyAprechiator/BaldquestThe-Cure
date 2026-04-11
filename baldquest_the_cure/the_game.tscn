@@ -8,4 +8,6 @@ script = ExtResource("1_sbril")
 
 [node name="World" parent="." instance=ExtResource("2_ir4x8")]
 
-[node name="MinigameContainer" type="Node2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MinigameContainer" type="Node2D" parent="CanvasLayer"]

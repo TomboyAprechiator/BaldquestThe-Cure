@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		interact()
 
 func interact():
-	get_tree().current_scene._start_minigame("res://lockpicking_game.tscn")
+	get_tree().current_scene._start_minigame("res://lockpicking_game.tscn",1)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
