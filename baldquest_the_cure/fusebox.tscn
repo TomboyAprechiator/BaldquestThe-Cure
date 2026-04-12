@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjvdi7wmgcwqw"]
 
 [ext_resource type="Script" uid="uid://ccpcf7qlhsyi" path="res://fusebox.gd" id="1_sgqmr"]
-[ext_resource type="Texture2D" uid="uid://tld4aymnbsg2" path="res://icon.svg" id="2_l0lhi"]
+[ext_resource type="Texture2D" uid="uid://m0wo37vsysfe" path="res://Fusebox.png" id="2_sgqmr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gwn"]
 size = Vector2(122, 118)
@@ -16,7 +16,19 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_x2gwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_l0lhi")
+scale = Vector2(2.43, 2.43)
+texture = ExtResource("2_sgqmr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -70.0
+offset_top = -85.0
+offset_right = 71.0
+offset_bottom = -62.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 12
+text = "E to hotwire Fuses"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpp4313c44gb7"]
+[gd_scene load_steps=4 format=3 uid="uid://bl6cc1i7iuoux"]
 
-[ext_resource type="Script" uid="uid://c54brjs5548a1" path="res://timinggameloader.gd" id="1_jihhr"]
-[ext_resource type="Texture2D" uid="uid://dajyp584qpddp" path="res://Generator.png" id="2_jihhr"]
+[ext_resource type="Script" uid="uid://cq256w8vm2p36" path="res://labcomputer.gd" id="1_chn3y"]
+[ext_resource type="Texture2D" uid="uid://diq7s3d1cy2ps" path="res://Computer.png" id="2_chn3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gwn"]
 size = Vector2(122, 118)
 
-[node name="timinggameloader" type="Node2D"]
-script = ExtResource("1_jihhr")
+[node name="InteractableBaseObject" type="Node2D"]
+script = ExtResource("1_chn3y")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -16,16 +16,16 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_x2gwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.44, 2.44)
-texture = ExtResource("2_jihhr")
+scale = Vector2(2, 2)
+texture = ExtResource("2_chn3y")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -67.0
-offset_top = -87.0
-offset_right = 88.0
-offset_bottom = -64.0
+offset_left = -63.0
+offset_top = -60.0
+offset_right = 82.0
+offset_bottom = -37.0
 theme_override_constants/outline_size = 12
-text = "E to Start Generator"
+text = "E to Use Computer"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

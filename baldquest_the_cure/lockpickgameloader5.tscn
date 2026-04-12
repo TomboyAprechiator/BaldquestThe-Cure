@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdnmh678sdpgu"]
+[gd_scene load_steps=4 format=3 uid="uid://c38c1g5hf0urs"]
 
-[ext_resource type="Script" uid="uid://ukabctfectow" path="res://lockpickgameloader_3.gd" id="1_ddux1"]
-[ext_resource type="Texture2D" uid="uid://tld4aymnbsg2" path="res://icon.svg" id="2_k8de1"]
+[ext_resource type="Script" uid="uid://m2fitbglfq8e" path="res://lockpickgameloader_5.gd" id="1_evik8"]
+[ext_resource type="Texture2D" uid="uid://tld4aymnbsg2" path="res://icon.svg" id="2_k7p2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbufo"]
 size = Vector2(125, 123)
 
 [node name="lockpickgameloader" type="Node2D"]
-script = ExtResource("1_ddux1")
+script = ExtResource("1_evik8")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -17,13 +17,13 @@ shape = SubResource("RectangleShape2D_qbufo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("2_k8de1")
+texture = ExtResource("2_k7p2u")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -45.0
-offset_top = -93.0
-offset_right = 60.0
-offset_bottom = -70.0
+offset_left = -50.0
+offset_top = -94.0
+offset_right = -10.0
+offset_bottom = -71.0
 theme_override_constants/outline_size = 12
 text = "E to pick Lock"
 

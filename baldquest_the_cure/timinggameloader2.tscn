@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpp4313c44gb7"]
+[gd_scene load_steps=4 format=3 uid="uid://560goub6yvlp"]
 
-[ext_resource type="Script" uid="uid://c54brjs5548a1" path="res://timinggameloader.gd" id="1_jihhr"]
-[ext_resource type="Texture2D" uid="uid://dajyp584qpddp" path="res://Generator.png" id="2_jihhr"]
+[ext_resource type="Script" uid="uid://dhbr0d6pix4ma" path="res://timinggameloader_2.gd" id="1_gx1my"]
+[ext_resource type="Texture2D" uid="uid://bgwjs8jdasj61" path="res://Machine1.png" id="2_gx1my"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gwn"]
 size = Vector2(122, 118)
 
 [node name="timinggameloader" type="Node2D"]
-script = ExtResource("1_jihhr")
+script = ExtResource("1_gx1my")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -16,16 +16,16 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_x2gwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.44, 2.44)
-texture = ExtResource("2_jihhr")
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_gx1my")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -67.0
-offset_top = -87.0
-offset_right = 88.0
-offset_bottom = -64.0
+offset_left = -79.0
+offset_top = -68.0
+offset_right = 100.0
+offset_bottom = -45.0
 theme_override_constants/outline_size = 12
-text = "E to Start Generator"
+text = "E to Adjust Machine"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

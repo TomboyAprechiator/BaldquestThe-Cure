@@ -18,11 +18,14 @@ func _process(delta: float) -> void:
 	elif PlayerInRange == "No":
 		$Label.visible = false
 func interact():
-	get_tree().current_scene.fuse = true
+	get_tree().current_scene.curegotten = true
+	visible=false
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		PlayerInRange = "Yes"
+		print("ENTERED")
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

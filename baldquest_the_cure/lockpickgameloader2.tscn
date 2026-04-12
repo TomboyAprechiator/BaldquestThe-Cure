@@ -16,7 +16,16 @@ position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_qbufo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_jkmb4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -53.0
+offset_top = -93.0
+offset_right = 52.0
+offset_bottom = -70.0
+theme_override_constants/outline_size = 12
+text = "E to pick Lock"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

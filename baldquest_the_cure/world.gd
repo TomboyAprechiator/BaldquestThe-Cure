@@ -69,6 +69,7 @@ func open_door(doorid: int):
 	if doorid == 1:
 		$TileMapLayer.set_cell(Vector2i(44,11),-1)
 		$TileMapLayer.set_cell(Vector2i(44,12),-1)
+		$TheCure.set_process(false)
 	if doorid == 2:
 		$TileMapLayer.set_cell(Vector2i(51,20),-1)
 		$TileMapLayer.set_cell(Vector2i(51,21),-1)
@@ -83,3 +84,13 @@ func open_door(doorid: int):
 	if doorid == 7:
 		$TileMapLayer.set_cell(Vector2i(57,27),-1)
 		$TileMapLayer.set_cell(Vector2i(57,28),-1)
+	if doorid == 8:
+		$TileMapLayer.set_cell(Vector2i(74,25),-1)
+		$TileMapLayer.set_cell(Vector2i(75,25),-1)
+	if doorid == 10:
+		get_tree().current_scene.machineadjusted = true
+	if doorid == 11:
+		get_tree().current_scene.machinewired = true
+	if doorid == 67: 
+		$TileMapLayer.set_cell(Vector2i(96,27),-1)
+		$TileMapLayer.set_cell(Vector2i(96,28),-1)

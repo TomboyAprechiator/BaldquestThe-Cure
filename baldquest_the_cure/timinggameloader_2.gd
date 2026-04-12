@@ -17,8 +17,9 @@ func _process(delta: float) -> void:
 		$Label.visible = true
 	elif PlayerInRange == "No":
 		$Label.visible = false
+
 func interact():
-	get_tree().current_scene.fuse = true
+	get_tree().current_scene._start_minigame("res://timing_game.tscn",10)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

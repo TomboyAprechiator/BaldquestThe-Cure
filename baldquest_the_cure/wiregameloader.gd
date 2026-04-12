@@ -12,6 +12,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.powah == true and get_tree().current_scene.fuse == true :
 		interact()
+	if PlayerInRange == "Yes":
+		$Label.visible = true
+	elif PlayerInRange == "No":
+		$Label.visible = false
 
 func interact():
 	get_tree().current_scene._start_minigame("res://wiregame.tscn",7)

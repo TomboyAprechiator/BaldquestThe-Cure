@@ -1,8 +1,6 @@
 extends Node2D
-
 @export var interact_text := "Press E to interact"
 @export var PlayerInRange := "No"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,8 +15,9 @@ func _process(delta: float) -> void:
 		$Label.visible = true
 	elif PlayerInRange == "No":
 		$Label.visible = false
+
 func interact():
-	get_tree().current_scene.fuse = true
+	get_tree().current_scene._start_minigame("res://lockpicking_game.tscn",67)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

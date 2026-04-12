@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d12pr1oijrffi"]
+
+[ext_resource type="Script" uid="uid://cfwcmss3dnifx" path="res://wiregameloader_3.gd" id="1_hnosu"]
+[ext_resource type="Texture2D" uid="uid://br4tlh8cc6krc" path="res://WiresBox.png" id="2_hnosu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe54j"]
+size = Vector2(125, 123)
+
+[node name="wiregameloader" type="Node2D"]
+script = ExtResource("1_hnosu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_oe54j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("2_hnosu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -66.0
+offset_top = -62.0
+offset_right = 88.0
+offset_bottom = -39.0
+theme_override_constants/outline_size = 12
+text = "E to rewire Machine"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
