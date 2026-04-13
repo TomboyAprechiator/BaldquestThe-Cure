@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn3lw2mxsschr"]
+
+[ext_resource type="Script" uid="uid://cawatbvnrqjxr" path="res://mail_box.gd" id="1_hyhjd"]
+[ext_resource type="Texture2D" uid="uid://17dqeg4f67nx" path="res://mailbox.png" id="2_2lduv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gwn"]
+size = Vector2(122, 118)
+
+[node name="InteractableBaseObject" type="Node2D"]
+script = ExtResource("1_hyhjd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_x2gwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_2lduv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -63.0
+offset_top = -60.0
+offset_right = 82.0
+offset_bottom = -37.0
+theme_override_constants/outline_size = 12
+text = "E to Send Mail"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

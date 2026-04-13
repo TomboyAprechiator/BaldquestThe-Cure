@@ -12,6 +12,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.powah == true and get_tree().current_scene.fuse == true :
 		interact()
+	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.powah == true and get_tree().current_scene.fuse == false :
+		get_tree().current_scene.show_popup("The Pannel's dark, theres no Power")
+	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.powah == false and get_tree().current_scene.fuse == true :
+		get_tree().current_scene.show_popup("The Pannel's dark, theres no Power")
+	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.powah == false and get_tree().current_scene.fuse == false :
+		get_tree().current_scene.show_popup("The Pannel's dark, theres no Power")
 	if PlayerInRange == "Yes":
 		$Label.visible = true
 	elif PlayerInRange == "No":

@@ -3,7 +3,6 @@ extends Node2D
 @export var interact_text := "Press E to interact"
 @export var PlayerInRange := "No"
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,19 +10,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact"):
+	if PlayerInRange == "Yes" and Input.is_action_just_pressed("Interact") and get_tree().current_scene.curegotten == true :
 		interact()
 	if PlayerInRange == "Yes":
 		$Label.visible = true
 	elif PlayerInRange == "No":
 		$Label.visible = false
+
 func interact():
-	get_tree().current_scene.fuse = true
-	if get_tree().current_scene.powah == true and get_tree().current_scene.fuse == true:
-		get_tree().current_scene.show_popup("I've Shoved some Foil into the Breaker. Power's on! Nice!")
-	elif get_tree().current_scene.powah == true and get_tree().current_scene.fuse == false:
-		get_tree().current_scene.show_popup("I've Shoved some Foil into the Breaker. Power still seems off, though. Is there a Generator?")
-	
+	get_tree().change_scene_to_file("ending.tscn")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

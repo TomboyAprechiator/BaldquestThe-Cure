@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bloaeytb4dgfb"]
+
+[ext_resource type="Script" uid="uid://cnxtetrlqucrc" path="res://begining.gd" id="1_jsjv7"]
+[ext_resource type="Texture2D" uid="uid://4fyswcr463db" path="res://Fren.png" id="2_wci5x"]
+
+[node name="begining" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_jsjv7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(111111, 111111)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.127305, 0.322408, 0.203394, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 301.0
+offset_top = 40.0
+offset_right = 684.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 59
+text = "LORE EXPOSITION
+<--- you"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 54.0
+offset_top = 39.0
+offset_right = 94.0
+offset_bottom = 79.0
+scale = Vector2(5.10025, 3.43813)
+texture = ExtResource("2_wci5x")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 58.0
+offset_top = 250.0
+offset_right = 1058.0
+offset_bottom = 1250.0
+theme_override_font_sizes/font_size = 27
+text = "You - Fren - have recently taken up working as a  private investigator.
+Stalking people, Breaking into places, going through peoples stuff... 
+It comes as naturaly to you as breathing does for most other people.
+
+One day, an oddly red man walked into your office. Judging by the voice and hand-talk, he must have been italian. Italian? Or maybe Sicilian? You couldnt quite tell, because you were distracted by how utterly devoid of hair his head was. Like king Neptune, man, gah dayum.
+He demanded you find something for him - a cure to his baldness.
+
+
+
+"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 935.0
+offset_top = 564.0
+offset_right = 1119.0
+offset_bottom = 595.0
+text = "CONTINUE"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

@@ -1,19 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://mm4em4db07dm"]
+[gd_scene load_steps=6 format=3 uid="uid://mm4em4db07dm"]
 
 [ext_resource type="Script" uid="uid://b2cag2u8pal4e" path="res://the_game.gd" id="1_sbril"]
 [ext_resource type="PackedScene" uid="uid://dfc6oadcs7ssl" path="res://world.tscn" id="2_ir4x8"]
 [ext_resource type="Texture2D" uid="uid://c3keo4tanwkfx" path="res://FrenPort.png" id="3_ir4x8"]
+[ext_resource type="PackedScene" uid="uid://cn1e4x44xer7y" path="res://text_poper.tscn" id="4_rwqnc"]
+[ext_resource type="PackedScene" uid="uid://byf65v268oq7w" path="res://text_poper_with_conditions.tscn" id="5_o5p78"]
 
 [node name="TheGame" type="Node2D"]
 script = ExtResource("1_sbril")
 
 [node name="World" parent="." instance=ExtResource("2_ir4x8")]
+process_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="MinigameContainer" type="Node2D" parent="CanvasLayer"]
+process_mode = 3
 
 [node name="VNText" type="RichTextLabel" parent="CanvasLayer"]
+process_mode = 3
 visible = false
 offset_left = 198.0
 offset_top = 459.0
@@ -24,6 +30,7 @@ theme_override_font_sizes/normal_font_size = 22
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 [node name="Portrait" type="TextureRect" parent="CanvasLayer"]
+process_mode = 3
 visible = false
 offset_left = 8.0
 offset_top = 492.0
@@ -33,6 +40,7 @@ texture = ExtResource("3_ir4x8")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+process_mode = 3
 visible = false
 offset_left = 53.0
 offset_top = 460.0
@@ -41,3 +49,91 @@ offset_bottom = 491.0
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 22
 text = "Fren"
+
+[node name="PopupPanel" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = 27.0
+offset_right = 46.3201
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.99, 0.99)
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupPanel"]
+layout_mode = 0
+offset_left = 4.04035
+offset_top = 31.3131
+offset_right = 168.04
+offset_bottom = 80.3131
+text = "SPERM SPERM  CUM SPERM SPERM CUMSPERM SPERM  CUM SPERM SPERM CUM"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PopupPanel"]
+layout_mode = 0
+offset_left = 149.495
+offset_right = 167.495
+offset_bottom = 31.0
+text = "X"
+
+[node name="TextPoper" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(768, 69)
+scale = Vector2(1, 4.8)
+TextHere = "\"That must be the place, there further down the path! What a strange building, here in the middle of nowhere. It doesnt look like anyone's been here in ages. Not that its easy to tell, with no windows. Time to get to work!\""
+
+[node name="TextPoper2" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1331, 304)
+scale = Vector2(4.17431, 1.41734)
+TextHere = "\"Good thing i brought my tools! These doors are clearly locked. Clearly. I can tell, my insticts say so.\""
+
+[node name="TextPoper3" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1470, 332)
+TextHere = "\"This must have been the Lobby, back when this place was operational. Whenever that is, if it ever was. Looks like they expected quite a few people to line up for their treatment. Looks like it didn't work though though. Could it realy be here? Time to look around.\""
+
+[node name="TextPoper4" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1692, 515)
+scale = Vector2(10.1338, 0.359973)
+TextHere = "\"I should try to get the power back on, somehow...\""
+
+[node name="TextPoper5" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(2063, 242)
+TextHere = "\"These doors arent locked. Instead, they're blocked from the other side. Nothing's ever just easy, hmm?\""
+
+[node name="TextPoper8" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1594, 1029)
+TextHere = "\"Some sort of large office space. Maybe that there on the far wall is the fuse box?\""
+
+[node name="TextPoper9" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(2331, 846)
+TextHere = "\"The Sign on the wall says \"LAB\". If the cure is anywhere, i bet it's in there.\"\""
+
+[node name="TextPoper12" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(2569, 845)
+TextHere = "\"The Sign on the wall says \"LAB\". If the cure is anywhere, i bet it's in there.\"\""
+
+[node name="TextPoper10" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(2606, 359)
+scale = Vector2(15.9347, 0.373333)
+TextHere = "\"The computer back there seems be hooked up to a large rack of wires and relays, which then feeds... something... to some 3D-Printer looking thing. Its sure seem better days though, the Printer is bent out of shape and half the wires are chewed through. Rats... i'll have to fix it, first.\""
+
+[node name="TextPoper11" parent="." instance=ExtResource("5_o5p78")]
+position = Vector2(2982, 679)
+scale = Vector2(7.23863, 0.261933)
+
+[node name="TextPoper6" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1938, 1027)
+scale = Vector2(3.32, 1)
+TextHere = "\"Another room with a row of desks. Maybe there's some information somewhere?\""
+
+[node name="TextPoper7" parent="." instance=ExtResource("5_o5p78")]
+position = Vector2(3760, 987)
+scale = Vector2(8.04, 3.12)
+TextSucess = "\"I should put the cure in the mail and send it to the client. Lets see... Cumstreet 69, Staten island, NY. Okay, time to put in in!\""
+TextFailure = "\"I dont have the cure on me yet... why did i come here?\""
+
+[connection signal="pressed" from="CanvasLayer/PopupPanel/Button" to="." method="_on_button_pressed"]

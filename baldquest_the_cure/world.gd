@@ -71,8 +71,8 @@ func open_door(doorid: int):
 		$TileMapLayer.set_cell(Vector2i(44,12),-1)
 		$TheCure.set_process(false)
 	if doorid == 2:
-		$TileMapLayer.set_cell(Vector2i(51,20),-1)
-		$TileMapLayer.set_cell(Vector2i(51,21),-1)
+		$TileMapLayer.set_cell(Vector2i(51,22),-1)
+		$TileMapLayer.set_cell(Vector2i(51,23),-1)
 	if doorid == 3:
 		$TileMapLayer.set_cell(Vector2i(51,33),-1)
 		$TileMapLayer.set_cell(Vector2i(51,34),-1)
@@ -81,6 +81,10 @@ func open_door(doorid: int):
 		$TileMapLayer.set_cell(Vector2i(62,16),-1)
 	if doorid == 5:
 		get_tree().current_scene.powah = true
+		if get_tree().current_scene.powah == true and get_tree().current_scene.fuse == true:
+			get_tree().current_scene.show_popup("Power's on! Nice!")
+		elif get_tree().current_scene.powah == true and get_tree().current_scene.fuse == false:
+			get_tree().current_scene.show_popup("Generator's on! Nice. Power still seems off, though. Is there a breaker?")
 	if doorid == 7:
 		$TileMapLayer.set_cell(Vector2i(57,27),-1)
 		$TileMapLayer.set_cell(Vector2i(57,28),-1)
