@@ -1,70 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4ocgm85nlmos"]
+[gd_scene load_steps=3 format=3 uid="uid://b804l40kx13hk"]
 
-[ext_resource type="Script" uid="uid://cgv3md8jkxtjo" path="res://wiregame.gd" id="1_3a7ar"]
-[ext_resource type="PackedScene" uid="uid://bq1h7d5qa3fm2" path="res://wirenode.tscn" id="1_ogvca"]
+[ext_resource type="Script" uid="uid://wt5h41nyeru4" path="res://wiregame_2.gd" id="1_8decn"]
+[ext_resource type="PackedScene" uid="uid://bq1h7d5qa3fm2" path="res://wirenode.tscn" id="2_36q6p"]
 
-[node name="wiregame" type="Node2D"]
-script = ExtResource("1_3a7ar")
+[node name="wiregame2" type="Node2D"]
+script = ExtResource("1_8decn")
 
-[node name="wirenode" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenode" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 102.0
 offset_top = 38.0
 offset_right = 205.0
 offset_bottom = 140.0
 
-[node name="wirenode2" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenode2" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 104.0
 offset_top = 159.0
 offset_right = 207.0
 offset_bottom = 261.0
 
-[node name="wirenode3" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenode3" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 110.0
 offset_top = 285.0
 offset_right = 213.0
 offset_bottom = 387.0
 
-[node name="wirenode4" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenode4" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 110.0
 offset_top = 401.0
 offset_right = 213.0
 offset_bottom = 503.0
 
-[node name="wirenode5" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenode5" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 112.0
 offset_top = 518.0
 offset_right = 215.0
 offset_bottom = 620.0
 
-[node name="wirenoderight" parent="." instance=ExtResource("1_ogvca")]
-offset_left = 1030.0
-offset_top = 115.0
-offset_right = 1133.0
-offset_bottom = 217.0
+[node name="wirenoderight" parent="." instance=ExtResource("2_36q6p")]
+offset_left = 1045.0
+offset_top = 114.0
+offset_right = 1148.0
+offset_bottom = 216.0
 rotation = 3.14159
 
-[node name="wirenoderight2" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenoderight2" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 1031.0
 offset_top = 239.0
 offset_right = 1134.0
 offset_bottom = 341.0
 rotation = 3.14159
 
-[node name="wirenoderight3" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenoderight3" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 1031.0
 offset_top = 357.0
 offset_right = 1134.0
 offset_bottom = 459.0
 rotation = 3.14159
 
-[node name="wirenoderight4" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenoderight4" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 1028.0
 offset_top = 490.0
 offset_right = 1131.0
 offset_bottom = 592.0
 rotation = 3.14159
 
-[node name="wirenoderight5" parent="." instance=ExtResource("1_ogvca")]
+[node name="wirenoderight5" parent="." instance=ExtResource("2_36q6p")]
 offset_left = 1021.0
 offset_top = 624.0
 offset_right = 1124.0
@@ -79,21 +79,21 @@ offset_bottom = 34.0
 text = "Done"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 36.0
-offset_top = 69.0
-offset_right = 76.0
-offset_bottom = 92.0
+offset_left = 13.0
+offset_top = 70.0
+offset_right = 96.0
+offset_bottom = 106.0
 theme_override_font_sizes/font_size = 26
-text = "1+1="
+text = "17-11="
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 1008.0
-offset_top = -20.0
-offset_right = 1067.0
-offset_bottom = 16.0
+offset_left = 1043.0
+offset_top = -19.0
+offset_right = 1102.0
+offset_bottom = 17.0
 theme_override_font_sizes/font_size = 26
-text = "2"
+text = "6"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 35.0
@@ -101,7 +101,7 @@ offset_top = 190.0
 offset_right = 94.0
 offset_bottom = 226.0
 theme_override_font_sizes/font_size = 26
-text = "1+2="
+text = "5^2="
 
 [node name="Label2" type="Label" parent="Label2"]
 layout_mode = 0
@@ -110,32 +110,32 @@ offset_top = -19.0
 offset_right = 1074.0
 offset_bottom = 17.0
 theme_override_font_sizes/font_size = 26
-text = "3"
+text = "Bald"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 32.0
-offset_top = 320.0
-offset_right = 91.0
-offset_bottom = 356.0
+offset_left = 8.0
+offset_top = 316.0
+offset_right = 106.0
+offset_bottom = 352.0
 theme_override_font_sizes/font_size = 26
-text = "2+2="
+text = "Michael"
 
 [node name="Label3" type="Label" parent="Label3"]
 layout_mode = 0
-offset_left = 1012.0
-offset_top = -31.0
-offset_right = 1071.0
-offset_bottom = 5.0
+offset_left = 1037.0
+offset_top = -28.0
+offset_right = 1096.0
+offset_bottom = 8.0
 theme_override_font_sizes/font_size = 26
-text = "4"
+text = "25"
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 37.0
-offset_top = 425.0
-offset_right = 96.0
-offset_bottom = 461.0
+offset_left = 21.0
+offset_top = 429.0
+offset_right = 110.0
+offset_bottom = 465.0
 theme_override_font_sizes/font_size = 26
-text = "Apple"
+text = "58+44="
 
 [node name="Label4" type="Label" parent="Label4"]
 layout_mode = 0
@@ -144,7 +144,7 @@ offset_top = -6.0
 offset_right = 1081.0
 offset_bottom = 30.0
 theme_override_font_sizes/font_size = 26
-text = "Red"
+text = "Glue"
 
 [node name="Label5" type="Label" parent="."]
 offset_left = 26.0
@@ -152,7 +152,7 @@ offset_top = 545.0
 offset_right = 98.0
 offset_bottom = 581.0
 theme_override_font_sizes/font_size = 26
-text = "Sun"
+text = "Horse"
 
 [node name="Label5" type="Label" parent="Label5"]
 layout_mode = 0
@@ -161,7 +161,7 @@ offset_top = 3.0
 offset_right = 1080.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 26
-text = "Warm"
+text = "102"
 
 [connection signal="pressed" from="wirenode" to="." method="_on_wirenode_pressed"]
 [connection signal="pressed" from="wirenode2" to="." method="_on_wirenode_2_pressed"]

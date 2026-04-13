@@ -136,4 +136,9 @@ scale = Vector2(8.04, 3.12)
 TextSucess = "\"I should put the cure in the mail and send it to the client. Lets see... Cumstreet 69, Staten island, NY. Okay, time to put in in!\""
 TextFailure = "\"I dont have the cure on me yet... why did i come here?\""
 
+[node name="TextPoper13" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(1965, 551)
+scale = Vector2(5.2549, 0.321739)
+TextHere = "\"Whoa! It seems these People have some Skelletons in the Closet. Atleast one, in the Janitors Closet.\" Its dead eyes look up at you as if it still mourned its lack of hair to this day."
+
 [connection signal="pressed" from="CanvasLayer/PopupPanel/Button" to="." method="_on_button_pressed"]

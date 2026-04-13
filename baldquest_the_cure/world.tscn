@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dfc6oadcs7ssl"]
+[gd_scene load_steps=23 format=4 uid="uid://dfc6oadcs7ssl"]
 
 [ext_resource type="Script" uid="uid://daa8f6t5k4glp" path="res://world.gd" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://dd54ftj23g0bb" path="res://player.tscn" id="1_f3sb7"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c38c1g5hf0urs" path="res://lockpickgameloader5.tscn" id="16_2u3nc"]
 [ext_resource type="PackedScene" uid="uid://cjuaxas5mr8w6" path="res://the_cure.tscn" id="16_udxuc"]
 [ext_resource type="PackedScene" uid="uid://dn3lw2mxsschr" path="res://MailBox.tscn" id="17_udxuc"]
+[ext_resource type="Texture2D" uid="uid://ilk7soi2k8ed" path="res://Skellington.png" id="18_ikiii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbfbk"]
 texture = ExtResource("2_pkg7o")
@@ -279,3 +280,8 @@ position = Vector2(2809, 379)
 
 [node name="InteractableBaseObject" parent="." instance=ExtResource("17_udxuc")]
 position = Vector2(3786, 1114)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1888, 579)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("18_ikiii")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3wu0nm16xcf7"]
 
 [ext_resource type="Script" uid="uid://ckmvqbeedxuw2" path="res://arrow.gd" id="1_emvvt"]
-[ext_resource type="Texture2D" uid="uid://tld4aymnbsg2" path="res://icon.svg" id="1_xd4iq"]
 [ext_resource type="Texture2D" uid="uid://b02pndt0ug604" path="res://Green.bmp" id="2_emvvt"]
+[ext_resource type="Texture2D" uid="uid://5ytfcpom4s6e" path="res://Arrow.png" id="2_lvjan"]
 [ext_resource type="Script" uid="uid://djo3sftaau1ct" path="res://target.gd" id="3_lvjan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvjan"]
@@ -16,6 +16,14 @@ size = Vector2(64, 406)
 
 [node name="TimingGame" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 6.0
+offset_top = 261.0
+offset_right = 46.0
+offset_bottom = 301.0
+scale = Vector2(28.9512, 2.3701)
+color = Color(1, 0, 0, 1)
+
 [node name="Arrow" type="CharacterBody2D" parent="."]
 position = Vector2(154, 309)
 script = ExtResource("1_emvvt")
@@ -25,7 +33,8 @@ position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_lvjan")
 
 [node name="Sprite2D" type="Sprite2D" parent="Arrow"]
-texture = ExtResource("1_xd4iq")
+scale = Vector2(3.99364, 4.02315)
+texture = ExtResource("2_lvjan")
 
 [node name="Target" type="Node2D" parent="."]
 position = Vector2(540, 308)

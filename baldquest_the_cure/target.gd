@@ -1,7 +1,7 @@
 extends Node2D
 
 var ArrowInBox = "No"
-var turns = 4
+var turns = 6
 @onready var arrow = get_node("../Arrow")
 
 # Called when the node enters the scene tree for the first time.
