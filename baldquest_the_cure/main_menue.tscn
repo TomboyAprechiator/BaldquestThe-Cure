@@ -101,6 +101,8 @@ offset_right = 489.0
 offset_bottom = 331.0
 text = "Cool Text used for main menue - https://cooltext.com, \"Gunmetal\" and \"Tough\"
 
+Background Music-Loop - \"SHADY\" by MadGravityStudio on Freesound.org. - CC0
+
 Evrything Else - by Me (TomboyAprechiator)"
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel"]
@@ -176,11 +178,11 @@ offset_right = 493.0
 offset_bottom = 328.0
 theme_override_font_sizes/normal_font_size = 14
 text = "Hey there! Thank you for checking out my game, whoever's reading this. 
-This is my second ever Game for a GameJam, and im not exactly a competent Dev. I mean, others produce whole fully polished awsome experiences in these 2 weeks, and i made... this! 
-So really - thank you for giving it the time of day!
-I hope you can have a few moments of \"Fun\" with this stinkie turd, it'll have been worth it if it makes you smile a bit :)
+This is my second ever game for a game jam, and I'm not exactly a competent dev. I mean, others produce whole, fully polished, awesome experiences in these 2 weeks, and I made... this! 
+So really, thank you for giving it the time of day!
+I hope you can have a few moments of \"fun\" with this stinky turd; it'll have been worth it if it makes you smile a bit. :)
 
-To the Strimurs: Hey Joel and others! Ive watched you for Years and Years, and i love your stuff. Never Change. Getting to have my Creation on the big funnymans screen for some Moments is an Honor, really. :)
+To the Strimurs: Hey Joel and others! I've watched you for years and years, and I love your stuff. Never change. Getting to have my creation on the big funny man's screen for some moments is an honor, really. :)
 Chat, please post Kappas."
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel3"]

@@ -40,7 +40,7 @@ offset_top = 250.0
 offset_right = 1058.0
 offset_bottom = 1250.0
 theme_override_font_sizes/font_size = 27
-text = "The \"Cure\" was sucessfully recoverd from the Lab and Shipped to a certain red italian man. If it worked? We Can only guess. Honestly, it smelled vaguely of almonds, which you vaguely remember is generaly not a sign its verry healthy to consume. None the less, the second half of your payment arrived without complaint, so thats all you care about. Maybe there'd be a buisness in selling this stuff afterall, but you aint the type for it. "
+text = "The \"cure\" was successfully recovered from the lab and shipped to a certain red Italian man. If it worked? We can only guess. Honestly, it smelled vaguely of almonds, which you vaguely remember is generally not a sign it's very healthy to consume. Nonetheless, the second half of your payment arrived without complaint, so that's all you care about. Maybe there'd be a business in selling this stuff after all, but you aren't the type for it. "
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="CanvasLayer"]

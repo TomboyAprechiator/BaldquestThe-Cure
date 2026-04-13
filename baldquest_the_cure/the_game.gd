@@ -9,7 +9,7 @@ var poopenfarten: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -89,3 +89,7 @@ func show_popup(text: String):
 
 func _on_button_pressed() -> void:
 	$CanvasLayer/PopupPanel.visible = false
+
+
+func _on_audio_stream_player_2d_finished() -> void:
+	$AudioStreamPlayer2D.play()

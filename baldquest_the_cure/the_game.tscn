@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://mm4em4db07dm"]
+[gd_scene load_steps=7 format=3 uid="uid://mm4em4db07dm"]
 
 [ext_resource type="Script" uid="uid://b2cag2u8pal4e" path="res://the_game.gd" id="1_sbril"]
 [ext_resource type="PackedScene" uid="uid://dfc6oadcs7ssl" path="res://world.tscn" id="2_ir4x8"]
 [ext_resource type="Texture2D" uid="uid://c3keo4tanwkfx" path="res://FrenPort.png" id="3_ir4x8"]
 [ext_resource type="PackedScene" uid="uid://cn1e4x44xer7y" path="res://text_poper.tscn" id="4_rwqnc"]
 [ext_resource type="PackedScene" uid="uid://byf65v268oq7w" path="res://text_poper_with_conditions.tscn" id="5_o5p78"]
+[ext_resource type="AudioStream" uid="uid://ccr50u7tqpo3c" path="res://789664__madgravitystudio__shady.wav" id="6_wg70j"]
 
 [node name="TheGame" type="Node2D"]
 script = ExtResource("1_sbril")
@@ -84,16 +85,16 @@ text = "X"
 [node name="TextPoper" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(768, 69)
 scale = Vector2(1, 4.8)
-TextHere = "\"That must be the place, there further down the path! What a strange building, here in the middle of nowhere. It doesnt look like anyone's been here in ages. Not that its easy to tell, with no windows. Time to get to work!\""
+TextHere = "\"That must be the place, there further down the path! What a strange building, here in the middle of nowhere. It doesn't look like anyone's been here in ages. Not that it's easy to tell, with no windows. Time to get to work!\""
 
 [node name="TextPoper2" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(1331, 304)
 scale = Vector2(4.17431, 1.41734)
-TextHere = "\"Good thing i brought my tools! These doors are clearly locked. Clearly. I can tell, my insticts say so.\""
+TextHere = "\"Good thing i brought my tools! These doors are clearly locked. Clearly. I can tell, my instincts say so.\""
 
 [node name="TextPoper3" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(1470, 332)
-TextHere = "\"This must have been the Lobby, back when this place was operational. Whenever that is, if it ever was. Looks like they expected quite a few people to line up for their treatment. Looks like it didn't work though though. Could it realy be here? Time to look around.\""
+TextHere = "\"This must have been the lobby back when this place was operational. Whenever that is, if it ever was. It looks like they expected quite a few people to line up for their treatment. Looks like it didn't work, though. Could it really be here? Time to look around.\""
 
 [node name="TextPoper4" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(1692, 515)
@@ -110,20 +111,27 @@ TextHere = "\"Some sort of large office space. Maybe that there on the far wall 
 
 [node name="TextPoper9" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(2331, 846)
-TextHere = "\"The Sign on the wall says \"LAB\". If the cure is anywhere, i bet it's in there.\"\""
+TextHere = "\"The sign on the wall says \"LAB\". If the cure is anywhere, I bet it's in there.\""
 
 [node name="TextPoper12" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(2569, 845)
-TextHere = "\"The Sign on the wall says \"LAB\". If the cure is anywhere, i bet it's in there.\"\""
+TextHere = "\"The sign on the wall says \"LAB\". If the cure is anywhere, I bet it's in there.\""
 
 [node name="TextPoper10" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(2606, 359)
 scale = Vector2(15.9347, 0.373333)
-TextHere = "\"The computer back there seems be hooked up to a large rack of wires and relays, which then feeds... something... to some 3D-Printer looking thing. Its sure seem better days though, the Printer is bent out of shape and half the wires are chewed through. Rats... i'll have to fix it, first.\""
+TextHere = "\"The computer back there seems to be hooked up to a large rack of wires and relays, which then feeds... something... to some 3D-printer-looking thing. It sure seems like better days, though; the printer is bent out of shape, and half the wires are chewed through. Rats... I'll have to fix it first.\""
+
+[node name="TextPoper14" parent="." instance=ExtResource("4_rwqnc")]
+position = Vector2(2556, 574)
+scale = Vector2(15.9347, 0.373333)
+TextHere = "The old lab is filled with all sorts of sciency equipment, most of which happens to look like big microscopes. Next to the microscopes are big tubes lined up, in various states of disrepair. They were growing something... humanoid \"Gross\""
 
 [node name="TextPoper11" parent="." instance=ExtResource("5_o5p78")]
 position = Vector2(2982, 679)
 scale = Vector2(7.23863, 0.261933)
+TextSucess = "That door ought to lead outside. I have the cure, so it's time to skiddaddle and get paid. See you never, creepy old building!"
+TextFailure = "I think that door leads outside. I should go find the cure before I leave!"
 
 [node name="TextPoper6" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(1938, 1027)
@@ -133,12 +141,20 @@ TextHere = "\"Another room with a row of desks. Maybe there's some information s
 [node name="TextPoper7" parent="." instance=ExtResource("5_o5p78")]
 position = Vector2(3760, 987)
 scale = Vector2(8.04, 3.12)
-TextSucess = "\"I should put the cure in the mail and send it to the client. Lets see... Cumstreet 69, Staten island, NY. Okay, time to put in in!\""
-TextFailure = "\"I dont have the cure on me yet... why did i come here?\""
+TextSucess = "\"I should put the cure in the mail and send it to the client. Let's see... Cumstreet 69, Staten Island, NY. Okay, time to put it in!\""
+TextFailure = "\"I don't have the cure on me yet... Why did I come here?\""
 
 [node name="TextPoper13" parent="." instance=ExtResource("4_rwqnc")]
 position = Vector2(1965, 551)
 scale = Vector2(5.2549, 0.321739)
-TextHere = "\"Whoa! It seems these People have some Skelletons in the Closet. Atleast one, in the Janitors Closet.\" Its dead eyes look up at you as if it still mourned its lack of hair to this day."
+TextHere = "\"Whoa! It seems these people have some skeletons in the closet. At least one, in the janitor's closet.\" Its dead eyes look up at you as if it still mourned its lack of hair to this day."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+position = Vector2(177, 158)
+stream = ExtResource("6_wg70j")
+autoplay = true
+max_distance = 999999.0
 
 [connection signal="pressed" from="CanvasLayer/PopupPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

@@ -13,10 +13,10 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	if cum == false:
-		$CanvasLayer/Label2.text = "He paid you half upfront, and walked out of the door again before you had any chance to properly Respond.
-		Thankfully you already had a lead - just that morning you'd seen a documentary about how a company back in the 70's tried to cure baldness. Didnt seem to have succeded, of course, but there were rumours of Foul Play.
+		$CanvasLayer/Label2.text = "He paid you half upfront and walked out of the door again before you had any chance to properly Respond.
+		Thankfully you already had a lead - just that morning you'd seen a documentary about how a company back in the 70s tried to cure baldness. Didn't seem to have succeeded, of course, but there were rumors of foul play.
 
-Their Headquaters were still around, it turns out. Maybe there's something there..."
+Their headquarters were still around, it turns out. Maybe there's something there..."
 		$CanvasLayer/Button.text = "Get Going!"
 		cum = true
 	elif cum == true:
