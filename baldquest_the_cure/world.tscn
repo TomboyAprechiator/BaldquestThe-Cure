@@ -329,3 +329,11 @@ LoreText = "\"What are we even doing here? Who are we to play God like this? And
 [node name="Paper5" parent="." instance=ExtResource("19_cbp6q")]
 position = Vector2(2228, 241)
 LoreText = "\"Eureka! Test Subject 67-B, on Formulation NaCN-X has grown a follicle! It brims with vigor!\""
+
+[node name="Paper6" parent="." instance=ExtResource("19_cbp6q")]
+position = Vector2(2883, 354)
+LoreText = "Engineers Note: Wirenodes may have multiple or no connections in some cases."
+
+[node name="Paper7" parent="." instance=ExtResource("19_cbp6q")]
+position = Vector2(2671, 494)
+LoreText = "This page is full of arcane, unreadable maths-scribbles. The only thing you read is \"-2 * -2 = +4\""
